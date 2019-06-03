@@ -36,11 +36,22 @@ public class ClassActivity1 extends AppCompatActivity {
                 Log.v(TAG,email);
                 Log.v(TAG,edt_password.getText().toString());
 
-                        Toast.makeText(getApplicationContext(),edt_name.getText().toString(),);
+                        Toast.makeText(getApplicationContext(),edt_name.getText().toString(),setActionBar(););
 
                         tst.setText("clear");
                         tst.setDuration(Toast.LENGTH_LONG);
                         tst.show();
+
+
+                        Snackbar.make(getParent(), "This is main activity", Snackbar.LENGTH_LONG)
+                                .setAction("CLOSE", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+
+                                    }
+                                })
+                                .setActionTextColor(getResources().getColor(android.R.color.holo_red_light ))
+                                .show();
 
                     }
                 });
